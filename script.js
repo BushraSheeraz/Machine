@@ -105,6 +105,52 @@ function textileFactory(brandName, clothStuff, clothprice, clothColor, printorNo
 let factory= textileFactory("Saffire","Cotton", "2000","Pink, OffWhite", true, "floral");
 
 
+function mobileFactory(brandName,price,mobilemodel,ownerName,mobilefeatures,mobileColor){
+    return{
+        name: brandName,
+        range: price,
+        model: mobilemodel,
+        owner: ownerName,
+        features: mobilefeatures,
+        color: mobileColor,
+        capture: function(){
+            console.log(`${this.name} ${this.model} can capture a super zoom picture with perfect pixcels!!`);
+        }
+    }
+}
+let mobile= mobileFactory("Huawie", "38000", "P30pro", "Suhail", ["Iconic Triple Camera","3650mAh Battery","Super Spectrum Sensor"], ["Breathing Crysta", "Aurora"]);
+
+
+
+function PepsiFactory(productName,productflavor,productPrice,departmentName,){
+    return{
+        name: productName,
+        flavor: productflavor,
+        price: productPrice,
+        department: departmentName,
+        productPreaparation: function(){
+            console.log(`${this.name} can be prepared only in ${this.department}`);
+        },
+        wrapp: function(){
+            console.log(`${this.name} is ready to deliver!`);
+        }
+    }
+}
+let product= PepsiFactory("Lays","Cheese", 30, "Snacks Department");
+
+function pizzaFactory(pizzaSize, pizzaFlavor, pizzaToppings, additionalFlavor,){
+    return{
+        size: pizzaSize,
+        flavor: pizzaFlavor,
+        toppings: pizzaToppings,
+        addFlavor: additionalFlavor,
+        baked: function(){
+            console.log(`Your ${this.flavor} pizza with ${this.toppings} toppings is ready to eat`);
+        }
+    }
+}
+let pizza= pizzaFactory("Large", "BBQ", ["Bacon","sausage", "chicken", "mushrooms", "red pepper"],"Extra Cheese");
+
 
 
 
